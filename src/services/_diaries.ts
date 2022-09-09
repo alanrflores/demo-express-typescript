@@ -1,5 +1,7 @@
+import { DiaryEntry } from "../type";
 
-[
+
+const diaryEntries: DiaryEntry[] = [
     {
         "id": 1,
         "date": "2017-01-01",
