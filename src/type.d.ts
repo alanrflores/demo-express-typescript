@@ -1,8 +1,9 @@
 //creamos nuestros propios tipos
-export type Weather = 'sunny'| 'rainy' | 'cloudy' | 'windy' | 'stormy'
-export type Visibility = 'great' | 'good' | 'ok' | 'poor'
+// export type Weather = 'sunny'| 'rainy' | 'cloudy' | 'windy' | 'stormy';
+// export type Visibility = 'great' | 'good' | 'ok' | 'poor';
 
-//es un objeto la cual va a recibir, esta pensada en extends
+
+//es un objeto la cual va a recibir, esta pensada en extends(extenderse)
 export interface DiaryEntry {
     id: number,
     date: string,
@@ -13,4 +14,6 @@ export interface DiaryEntry {
 
 // export type NonSensitiveInfoDiaryEntry = Pick<DiaryEntry, 'id' | 'date' | 'weather' | 'visibility' >
 
-export type NonSensitiveInfoDiaryEntry = Omit<DiaryEntry, 'comment'>
+export type NonSensitiveInfoDiaryEntry = Omit<DiaryEntry, 'comment'>;
+
+export type NewDiaryEntry = Omit<DiaryEntry,'id'>;

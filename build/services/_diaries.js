@@ -1,7 +1,10 @@
-import { DiaryEntry } from "../type";
-import toNewDiaryEntry from "../utils";
-
- const data = [
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const utils_1 = __importDefault(require("../utils"));
+const data = [
     {
         "id": 1,
         "date": "2017-01-01",
@@ -31,11 +34,9 @@ import toNewDiaryEntry from "../utils";
         "comment": "I almost failed the landing but I survived"
     }
 ];
-
-const diaryEntries : DiaryEntry [] = data.map(obj => {
-    const object = toNewDiaryEntry(obj) as DiaryEntry;
+const diaryEntries = data.map(obj => {
+    const object = (0, utils_1.default)(obj);
     object.id = obj.id;
     return object;
 });
-
-export default diaryEntries;
+exports.default = diaryEntries;
